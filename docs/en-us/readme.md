@@ -31,7 +31,7 @@
 </details>
 
 # About The Project
-![](./docs/img/screenshot.png)
+![](../img/screenshot.png)
 A simple clock application written with Qt that displays current date and time.
 
 # Built With

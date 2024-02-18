@@ -31,7 +31,7 @@
 </details>
 
 # 关于项目
-![](./docs/img/screenshot.png)
+![](../img/screenshot.png)
 使用Qt编写的简易时钟，目前可以以12小时制显示时间、日期、星期。
 
 # 用到的库
