@@ -2,7 +2,13 @@
 #define MAINWINDOW_HXX
 
 #include "QWidget"
+#include "QVBoxLayout"
+#include "QSpacerItem"
+#include "QHBoxLayout"
+#include "QLabel"
+#include "QTimer"
 #include "QFile"
+#include "QDateTime"
 #include "QMessageBox"
 
 class mainwindow : public QWidget {
@@ -13,7 +19,12 @@ public:
     ~mainwindow() override;
 
 private:
+    QLabel * currentTime = new QLabel;
+
     void loadTheme(QString css);
+
+private slots:
+    void updateTime();
 };
 
 
