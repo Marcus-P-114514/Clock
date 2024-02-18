@@ -1,2 +1,2 @@
 # Clock
-[Unfinished] Simple clock written with Qt
+Simple clock written with Qt
