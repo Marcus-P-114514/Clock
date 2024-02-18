@@ -32,7 +32,7 @@
 
 # About The Project
 ![](../img/screenshot.png)
-A simple clock application written with Qt that displays current date and time.
+A simple clock application written with Qt that displays current date, time, day of the week and time zone.
 
 # Built With
 This project is built with: 
