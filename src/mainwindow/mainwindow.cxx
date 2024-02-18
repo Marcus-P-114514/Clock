@@ -23,12 +23,12 @@ mainwindow::mainwindow(QWidget *parent) : QWidget(parent) {
     currentDayOfTheWeek->setText("周四");
     dateContainer->addWidget(currentDayOfTheWeek);
 
-    QSpacerItem * dateSpacer = new QSpacerItem(16, 16, QSizePolicy::Expanding, QSizePolicy::Fixed);
-    dateContainer->addSpacerItem(dateSpacer);
-
     currentDate->setObjectName("currentDate");
     currentDate->setText("1970年1月1日");
     dateContainer->addWidget(currentDate);
+
+    QSpacerItem * dateSpacer = new QSpacerItem(16, 16, QSizePolicy::Expanding, QSizePolicy::Fixed);
+    dateContainer->addSpacerItem(dateSpacer);
 
     timeView->addLayout(dateContainer);
 
@@ -48,6 +48,9 @@ mainwindow::mainwindow(QWidget *parent) : QWidget(parent) {
 
     this->setLayout(appView);
     this->setObjectName("mainwindow");
+    this->setWindowTitle("时钟");
+    this->resize(800, 600);
+
     loadTheme(":/stylesheet/stylesheet/style.css");
 }
 

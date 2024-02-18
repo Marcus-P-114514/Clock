@@ -4,21 +4,21 @@
 
 #currentTime {
     color: #F6F5F5;
-    background: transparent;
-    font-size: 64pt;
+    font-size: 96pt;
+    font-weight: bold;
 }
 
 #currentDayOfTheWeek {
     color: #33313B;
     background: #F6F5F5;
-    border: 1px solid #F6F5F5;
+    border: 0px solid #33313B;
     border-radius: 5px;
-    padding: 7px;
-    font-size: 32pt;
+    padding: 10px;
+    font-size: 32px;
 }
 
 #currentDate {
     color: #F6F5F5;
-    background: transparent;
-    font-size: 32pt;
+    background: #33313B;
+    font-size: 32px;
 }
