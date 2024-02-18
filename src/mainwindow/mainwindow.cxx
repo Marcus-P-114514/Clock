@@ -12,6 +12,7 @@ mainwindow::mainwindow(QWidget *parent) : QWidget(parent) {
     clockView->addSpacerItem(leftSpacer);
 
     QVBoxLayout * timeView = new QVBoxLayout;
+    timeView->setSpacing(16);
 
     currentTime->setObjectName("currentTime");
     currentTime->setText("00:00:00 A.M.");
@@ -31,6 +32,22 @@ mainwindow::mainwindow(QWidget *parent) : QWidget(parent) {
     dateContainer->addSpacerItem(dateSpacer);
 
     timeView->addLayout(dateContainer);
+
+    QWidget * sectionDivider = new QWidget;
+    sectionDivider->setObjectName("sectionDivider");
+    sectionDivider->setFixedHeight(3);
+    timeView->addWidget(sectionDivider);
+
+    QHBoxLayout * locationView = new QHBoxLayout;
+
+    QSpacerItem * locationSpacer = new QSpacerItem(16, 16, QSizePolicy::Expanding, QSizePolicy::Fixed);
+    locationView->addSpacerItem(locationSpacer);
+
+    timeZone->setObjectName("timeZone");
+    timeZone->setText("UTC+8");
+    locationView->addWidget(timeZone);
+
+    timeView->addLayout(locationView);
 
     clockView->addLayout(timeView);
 
@@ -107,8 +124,15 @@ void mainwindow::updateTime() {
         isAfternoonDesc = "A.M.";
     }   //如果当前时间为早上
 
+    //处理时区
+    int timeZoneInt = currentTimer.timeZone().offsetFromUtc(currentTimer);
+    timeZoneInt /= 60;
+    timeZoneInt /= 60;
+    QString timeZoneDesc = "UTC" + QString::number(timeZoneInt);
+
     //设置时间
     currentTime->setText(currentHrsStr + ":" + currentTimer.toString("mm") + " " + isAfternoonDesc);
     currentDayOfTheWeek->setText(currentTimer.toString("ddd"));
     currentDate->setText(currentTimer.toString("yyyy年M月dd日"));
+    timeZone->setText(timeZoneDesc);
 }

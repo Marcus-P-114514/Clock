@@ -9,6 +9,7 @@
 #include "QTimer"
 #include "QFile"
 #include "QDateTime"
+#include "QTimeZone"
 #include "QMessageBox"
 
 class mainwindow : public QWidget {
@@ -24,6 +25,8 @@ private:
     QLabel * currentDayOfTheWeek = new QLabel;
 
     QLabel * currentDate = new QLabel;
+
+    QLabel * timeZone = new QLabel;
 
     void loadTheme(QString css);
 

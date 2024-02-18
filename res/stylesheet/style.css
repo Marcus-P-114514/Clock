@@ -22,3 +22,13 @@
     background: #33313B;
     font-size: 32px;
 }
+
+#sectionDivider {
+    background: #F6F5F5;
+}
+
+#timeZone {
+    color: #F6F5F5;
+    background: #33313B;
+    font-size: 32px;
+}
