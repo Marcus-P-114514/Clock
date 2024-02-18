@@ -17,6 +17,21 @@ mainwindow::mainwindow(QWidget *parent) : QWidget(parent) {
     currentTime->setText("00:00:00 A.M.");
     timeView->addWidget(currentTime);
 
+    QHBoxLayout * dateContainer = new QHBoxLayout;
+
+    currentDayOfTheWeek->setObjectName("currentDayOfTheWeek");
+    currentDayOfTheWeek->setText("周四");
+    dateContainer->addWidget(currentDayOfTheWeek);
+
+    QSpacerItem * dateSpacer = new QSpacerItem(16, 16, QSizePolicy::Expanding, QSizePolicy::Fixed);
+    dateContainer->addSpacerItem(dateSpacer);
+
+    currentDate->setObjectName("currentDate");
+    currentDate->setText("1970年1月1日");
+    dateContainer->addWidget(currentDate);
+
+    timeView->addLayout(dateContainer);
+
     clockView->addLayout(timeView);
 
     QSpacerItem * rightSpacer = new QSpacerItem(16, 16, QSizePolicy::Expanding, QSizePolicy::Expanding);
@@ -90,4 +105,6 @@ void mainwindow::updateTime() {
 
     //设置时间
     currentTime->setText(currentHrsStr + ":" + currentTimer.toString("mm") + " " + isAfternoonDesc);
+    currentDayOfTheWeek->setText(currentTimer.toString("ddd"));
+    currentDate->setText(currentTimer.toString("yyyy年M月dd日"));
 }

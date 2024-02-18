@@ -21,6 +21,10 @@ public:
 private:
     QLabel * currentTime = new QLabel;
 
+    QLabel * currentDayOfTheWeek = new QLabel;
+
+    QLabel * currentDate = new QLabel;
+
     void loadTheme(QString css);
 
 private slots:

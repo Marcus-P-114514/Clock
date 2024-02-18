@@ -7,3 +7,18 @@
     background: transparent;
     font-size: 64pt;
 }
+
+#currentDayOfTheWeek {
+    color: #33313B;
+    background: #F6F5F5;
+    border: 1px solid #F6F5F5;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 32pt;
+}
+
+#currentDate {
+    color: #F6F5F5;
+    background: transparent;
+    font-size: 32pt;
+}
