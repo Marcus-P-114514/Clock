@@ -50,6 +50,7 @@ mainwindow::mainwindow(QWidget *parent) : QWidget(parent) {
     this->setObjectName("mainwindow");
     this->setWindowTitle("时钟");
     this->resize(800, 600);
+    this->setWindowIcon(QIcon(":/icon/icon/app.ico"));
 
     loadTheme(":/stylesheet/stylesheet/style.css");
 }

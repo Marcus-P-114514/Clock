@@ -2,4 +2,8 @@
     <qresource prefix="/stylesheet">
         <file>stylesheet/style.css</file>
     </qresource>
+
+    <qresource prefix="/icon">
+        <file>icon/app.ico</file>
+    </qresource>
 </RCC>
