@@ -2,6 +2,8 @@
 #define MAINWINDOW_HXX
 
 #include "QWidget"
+#include "QFile"
+#include "QMessageBox"
 
 class mainwindow : public QWidget {
 Q_OBJECT
@@ -11,6 +13,7 @@ public:
     ~mainwindow() override;
 
 private:
+    void loadTheme(QString css);
 };
 
 
