@@ -1,4 +1,4 @@
-中文 | [English](./docs/en-us/readme.md)
+中文 | [English](../en-us/readme.md)
 
 ![Static Badge](https://img.shields.io/badge/Qt-6.7.0-green?style=plastic&logo=qt)
 ![Static Badge](https://img.shields.io/badge/CMake-3.28-yellow?style=plastic&logo=cmake)
@@ -98,9 +98,9 @@ find_package(Qt5 COMPONENTS
 - [ ] 调整时间
 - [ ] 无边框窗口&全屏模式
 - [ ] 闹钟（待定）
-- [x] 多语言支持
-   - [ ] 中文
-   - [ ] 英语
+- [ ] 多语言支持
+    - [x] 中文
+    - [ ] 英语
 
 ### 贡献
 - 如果您有建议或者找到了bug，请提交issue。
@@ -113,10 +113,10 @@ find_package(Qt5 COMPONENTS
 ### 致谢
 
 - 框架
-  - Qt
+    - Qt
 - 工具
-  - CMake
+    - CMake
 - 字体
-  - Ubuntu
+    - Ubuntu
 - 文档
-    - Best-README-Template
+  - Best-README-Template
