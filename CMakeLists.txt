@@ -16,6 +16,7 @@ find_package(Qt6 COMPONENTS
 
 add_executable(Clock
         res/resources.qrc
+        res/icon/app.rc
         src/main.cxx
         src/mainwindow/mainwindow.cxx
         src/mainwindow/mainwindow.hxx
